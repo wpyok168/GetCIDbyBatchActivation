@@ -30,8 +30,6 @@ namespace GetCIDbyBatchActivation
 
             XElement xe2 = xd1.Root.Element(xn+ "Responses").Element(xn + "Response").Element(xn + "CID");
 
-
-            //无效
             XmlNamespaceManager xnm = new XmlNamespaceManager(new NameTable());
             xnm.AddNamespace("ActivationResponse", "http://www.microsoft.com/DRM/SL/BatchActivationResponse/1.0");
             XElement xe3 = xd1.XPathSelectElement("//ActivationResponse:CID", xnm);

@@ -35,8 +35,8 @@ namespace GetCIDbyBatchActivation
             xnm.AddNamespace("ar", "http://www.microsoft.com/DRM/SL/BatchActivationResponse/1.0");
             XElement xe3 = xd1.XPathSelectElement("//ar:CID", xnm);
             XElement err = xd1.XPathSelectElement("//ar:ErrorCode", xnm);
-            string errstr = err.Value;
-
+            //string errstr = err.Value;
+            //错误代码 0x7F:Exceeded; 0x67:; 0xD5:Blocked; 0x68:Invalidkey; 0x86:InvalidType; 0x90:IIDError; 0x71:NeverObtained;
         }
         private static XDocument CreateXml(int typeid, string iid, string pid)
         {
